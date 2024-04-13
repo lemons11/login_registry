@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>登录界面</title>
+	<link rel="stylesheet" href="./css/Login&register1.css">
+</head>
+
+<body>
+	<div class="box">
+		<div class="content">
+			<div class="login-warpper">
+				<h1>登录</h1>
+				<div class="login-from">
+					<div class="phone">
+						<span class="span-phone">使用账号或者手机号</span>
+						<input type="text" class="input-phone">
+					</div>
+					<div class="password phone">
+						<span class="span-password span-phone">密码</span>
+						<div class="input-item">
+							<input type="password" class="input-password input-phone">
+							<span class="icon"><img src="./asset/Login&register1/眼睛-闭眼.png" alt="" id="img"></span>
+						</div>
+					</div>
+					<button class="login-btn">登 录</button>
+				</div>
+				<div class="divider">
+					<span class="line"></span>
+					<span class="divider-text">其他方式登录</span>
+					<span class="line"></span>
+				</div>
+				<div class="other-login">
+					<div class="other-login-qq">
+						<img src="./asset/Login&register1/QQ.png" alt="">
+					</div>
+					<div class="other-login-vx">
+						<img src="./asset/Login&register1/WeChat.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		let eye = document.querySelector('.icon')
+		let img = document.querySelector('#img')
+		let psd = document.querySelector('.input-password')
+		var flay = 1
+		eye.onclick = function () {
+			if (flay === 0) {
+				psd.type = 'password'
+				img.src = "./asset/Login&register1/眼睛-闭眼.png"
+
+				flay = 1
+			} else {
+				psd.type = 'text'
+				img.src = "./asset/Login&register1/眼睛.png"
+				flay = 0
+			}
+		}
+	</script>
+</body>
+
+</html>
